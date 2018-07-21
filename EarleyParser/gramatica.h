@@ -52,4 +52,3 @@ private:
 };
 
 #endif /* GRAMATICA_H */
-

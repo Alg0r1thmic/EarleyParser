@@ -12,22 +12,15 @@ Earley::Earley(const Gramatica& g, const string& cad) {
 }
 
 bool Earley::parse() {
+    cout << "hello" << endl;
     unsigned i = 0;
-
-//     for (int i = 0; i < grammar.getProducciones().size(); i++) {
-//            grammar.getProducciones()[i].imprimir();
-//
-//        }
-//
-//        cout << cadena;
-
     initialization();
 
     do {
         clausure();
 
-        //        cout << "clausura: \n";
-        //        comprobar();
+        cout << "clausura: \n";
+        //       comprobar();
         for (auto it = check_var.begin(); it != check_var.end(); it++) {
             it->second = false;
         }
@@ -72,7 +65,6 @@ void Earley::initialization() {
 
 void Earley::clausure() {
     bool added = true;
-
     while (added) {
         added = false;
         char split_var;

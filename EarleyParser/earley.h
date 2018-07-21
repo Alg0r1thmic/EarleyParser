@@ -13,7 +13,6 @@ using namespace std;
 class Earley {
 public:
     Earley(const Gramatica& g, const string& cad);
-
     bool parse();
 private:
     Gramatica grammar;

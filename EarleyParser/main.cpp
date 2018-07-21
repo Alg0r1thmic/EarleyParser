@@ -1,17 +1,22 @@
-#include "mainwindow.h"
-#include <QApplication>
-
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
-
+#include <fstream>
 #include "earley.h"
-using namespace std;
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
-    return a.exec();
+using namespace std;
+void open()
+{
+    ifstream file;
+    file.open("gramatica.txt");
+    string ss;
+    file >> ss;
+    cout << ss ;
+}
+int main() {
+    string name="gramatica.txt";
+    string cad="abc";
+    //Gramatica gram(name);
+    //Earley ear(gram,cad);
+    open();
 }
